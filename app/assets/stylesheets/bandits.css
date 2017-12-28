@@ -1,0 +1,43 @@
+/*
+  Place all the styles related to the matching controller here.
+  They will automatically be included in application.css.
+*/
+.number {
+    width: 80px;
+    float: left;
+    height: 40px;
+    color: white;
+    font-size: large;
+    border-style: solid;
+    border-color: black;
+    padding-top: 20px;
+    background-color: rgba(0, 0, 0, 0.74);
+    text-align: center;
+}
+
+.start {
+    width: 80px;
+    float: left;
+    height: 40px;
+    font-size: large;
+    border-style: solid;
+    border-color: black;
+    padding-top: 20px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.stop {
+    width: 80px;
+    float: left;
+    height: 40px;
+    font-size: large;
+    border-style: solid;
+    border-color: black;
+    padding-top: 20px;
+    text-align: center;
+}
+
+.hide {
+    display: none;
+}

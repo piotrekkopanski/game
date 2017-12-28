@@ -1,0 +1,22 @@
+<%= form_with(model: bandit, local: true) do |form| %>
+  <% if bandit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(bandit.errors.count, "error") %> prohibited this bandit from being saved:</h2>
+
+      <ul>
+      <% bandit.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :bandit_name %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

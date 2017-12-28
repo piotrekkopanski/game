@@ -1,0 +1,55 @@
+<p id="notice"><%= notice %></p>
+
+<h1>One arm Bandit</h1>
+
+
+<br>
+<div class = "container"> 
+SCORE <%= $point.sum %>
+</div>
+
+<div class = "container"> 
+ <% $tab.each do |number| %>
+ <div class = "number"> <%= number %> </div>
+ <% end %>
+ <div class = "start" id="start-campaign"> START</div>
+ <div class = "stop hide"> <%= link_to 'STOP', game_bandits_path %> </div>
+</div>
+
+
+
+
+<script type="text/javascript">
+animate =  function(){  $('.number').each(function () {
+    $('.number').prop('Counter',9).animate({
+        Counter: 0
+    }, {
+        duration: 100,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+        }
+    });
+    $('.number').prop('Counter',0).animate({
+        Counter: 9
+    }, {
+        duration: 100,
+        easing: 'swing',
+        step: function (now) {
+            $(this).text(Math.ceil(now));
+
+        }
+        
+    });
+animate();
+});
+
+}
+ $("#start-campaign").click(function() {
+  $(".stop").removeClass("hide");
+   animate();
+   
+   
+  
+  });
+</script>

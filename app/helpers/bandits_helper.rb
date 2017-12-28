@@ -1,0 +1,2 @@
+module BanditsHelper
+end
